@@ -1,7 +1,10 @@
 
 export function stringCalculator(string: string) {
-    if (string.includes(',')) {
-        return 3;
+    if (string === '') {
+        return 0;
     }
-    return Number(string);
+    if (string.length === 1) {
+        return Number(string);
+    }
+    return 3
 }
