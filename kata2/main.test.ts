@@ -16,4 +16,7 @@ describe('String calculator module', () => {
     test('should return 6 when 1,2,3 string given', () => {
         expect(stringCalculator('1,2\n3')).toBe(6);
     });
+    test('should throw an error when string ends with a comma', () => {
+        expect(() => stringCalculator('1,2\n3,')).toThrow();
+    });
 });
