@@ -1,5 +1,6 @@
 
 export function stringCalculator(string: string) {
+    let sum = 0;
     if (string === '') {
         return 0;
     }
@@ -7,5 +8,6 @@ export function stringCalculator(string: string) {
         return Number(string);
     }
     const numbers = string.split(',').map(Number)
-    return numbers[0] + numbers[1]
+    numbers.forEach(number => sum += number)
+    return sum;
 }
