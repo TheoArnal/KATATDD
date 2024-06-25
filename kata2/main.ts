@@ -1,4 +1,3 @@
-
 export function stringCalculator(string: string) {
     if (string === '') {
         return 0;
@@ -6,6 +5,8 @@ export function stringCalculator(string: string) {
     if (string.length === 1) {
         return Number(string);
     }
-    const numbers = string.split(',').map(Number)
-    return numbers.reduce((acc, curr) => acc += curr);
+
+    string = string.replace(/\n/g, ',');
+    const numbers = string.split(',').map(Number);
+    return numbers.reduce((acc, curr) => acc + curr, 0);
 }
