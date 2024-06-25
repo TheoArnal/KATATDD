@@ -1,9 +1,11 @@
+import {BuzzValue, FizzValue} from "./main.test";
+
 export function fizzBuzz(int: number) {
-    if (int % 3 === 0 && int % 5 === 0) {
+    if (int % FizzValue === 0 && int % BuzzValue === 0) {
         return "FizzBuzz";
-    } else if (int % 3 === 0) {
+    } else if (int % FizzValue === 0) {
         return "Fizz";
-    } else if (int % 5 === 0) {
+    } else if (int % BuzzValue === 0) {
         return "Buzz";
     } else {
         return int.toString();
