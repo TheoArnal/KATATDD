@@ -1,7 +1,8 @@
 
 export function stringCalculator(string: string) {
-    if (string.includes(',')) {
-        return 3;
+    if (string === '') {
+        return 0;
     }
-    return Number(string);
+    const numbers = string.split(',').map(Number);
+    return numbers.reduce((sum, number) => sum + number);
 }
