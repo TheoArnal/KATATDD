@@ -1,4 +1,4 @@
 
 export function stringCalculator(string: string) {
-    return Number(string) || 0;
+    return Number(string);
 }
