@@ -6,5 +6,6 @@ export function stringCalculator(string: string) {
     if (string.length === 1) {
         return Number(string);
     }
-    return 3
+    const numbers = string.split(',').map(Number)
+    return numbers[0] + numbers[1]
 }
