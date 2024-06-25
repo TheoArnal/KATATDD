@@ -1,3 +1,4 @@
+import {fizzBuzz} from "./main";
 
 describe('fizzBuzz module', () => {
     test('should return 1 in string when given 1 in integer given', () => {
