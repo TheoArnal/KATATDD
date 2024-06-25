@@ -7,4 +7,7 @@ describe('fizzBuzz module', () => {
     test('should return "Fizz" in string when mutiple of 3 integer given', () => {
         expect(fizzBuzz(3)).toBe("Fizz");
     });
+    test('should return "Buzz" in string when mutiple of 5 integer given', () => {
+        expect(fizzBuzz(5)).toBe("Buzz");
+    });
 });
