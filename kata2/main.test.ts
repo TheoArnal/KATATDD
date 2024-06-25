@@ -10,7 +10,7 @@ describe('String calculator module', () => {
     test('should return 3 when 1,2 string given', () => {
         expect(stringCalculator('1,2')).toBe(3);
     });
-    test('should return 3 when 1,2,3 string given', () => {
-        expect(stringCalculator('1,2,3')).toBe(3);
+    test('should return 6 when 1,2,3 string given', () => {
+        expect(stringCalculator('1,2,3')).toBe(6);
     });
 });
