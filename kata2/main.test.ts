@@ -28,4 +28,7 @@ describe('String calculator module', () => {
     test('should return 7 when //sep\n2sep5 given', () => {
         expect(stringCalculator('//sep\n2sep5')).toBe(7)
     });
+    test('should return an error when //|\n1|2,3 given', () => {
+        expect(() => stringCalculator('//|\n1|2,3')).toThrow()
+    });
 });
