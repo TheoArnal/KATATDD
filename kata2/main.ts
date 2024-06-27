@@ -8,7 +8,9 @@ export function stringCalculator(string: string) {
     if (string.startsWith('//')) {
         let delimiter = string[2];
         if (string.includes('sep')){
-            return 7;
+            delimiter = 'sep';
+            string = string.slice(6);
+            return string.split(delimiter).map(Number).reduce((acc, curr) => acc + curr, 0);
         }
         string = string.slice(4);
         return string
