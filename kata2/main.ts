@@ -6,8 +6,13 @@ export function stringCalculator(string: string) {
     }
 
     if (string.startsWith('//')) {
+        const delimiter = string[2];
         string = string.slice(4);
-        return Number(string[0]) + Number(string[2])
+        return string
+            .split(delimiter)
+            .map(Number)
+            .reduce((acc, curr) => acc + curr, 0);
+
     }
 
 
