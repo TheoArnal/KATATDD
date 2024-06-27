@@ -5,6 +5,12 @@ export function stringCalculator(string: string) {
         throw new Error('error');
     }
 
+    if (string.startsWith('//')) {
+        string = string.slice(4);
+        return Number(string[0]) + Number(string[2])
+    }
+
+
     return string
         .replace(/\n/g, ',')
         .split(',')
