@@ -19,4 +19,7 @@ describe('String calculator module', () => {
     test('should throw an error when string ends with a comma', () => {
         expect(() => stringCalculator('1,2\n3,')).toThrow();
     });
+    test('should return 4 when //;\n1;3 given', () => {
+        expect(stringCalculator('//;\n1;3')).toBe(4)
+    });
 });
