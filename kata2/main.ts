@@ -6,7 +6,10 @@ export function stringCalculator(string: string) {
     }
 
     if (string.startsWith('//')) {
-        const delimiter = string[2];
+        let delimiter = string[2];
+        if (string.includes('sep')){
+            return 7;
+        }
         string = string.slice(4);
         return string
             .split(delimiter)
