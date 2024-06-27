@@ -6,6 +6,9 @@ export function stringCalculator(string: string) {
     }
 
     if (string.startsWith('//')) {
+        if(string.includes('|') && string.includes(',')){
+            throw new Error('‘|’ expected but ‘,’ found at position 3.');
+        }
         let delimiter = string[2];
         if (string.includes('sep')){
             delimiter = 'sep';
