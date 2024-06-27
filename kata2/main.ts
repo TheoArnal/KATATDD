@@ -5,6 +5,16 @@ export function stringCalculator(string: string) {
         throw new Error('error');
     }
 
+    if (string.startsWith('//')) {
+        const delimiter = string[2];
+        string = string.slice(4);
+        return string
+            .split(delimiter)
+            .map(Number)
+            .reduce((acc, curr) => acc + curr, 0);
+
+    }
+
     return string
         .replace(/\n/g, ',')
         .split(',')
